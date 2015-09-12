@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Clase1CompuMovil</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+</resources>
