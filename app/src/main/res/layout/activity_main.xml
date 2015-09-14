@@ -3,65 +3,131 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ea1d1b1b"
+    android:nestedScrollingEnabled="false"
+    android:scrollIndicators="right">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Resultado.."
-            android:id="@+id/tv_resultado"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            android:textSize="40dp" />
-
-        <EditText
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/et_primervalor"
-            android:hint="Ingrese primer valor" />
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:scrollIndicators="right">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/et_segundovalor"
-            android:layout_gravity="center_horizontal"
-            android:hint="Ingrese Segundo Valor" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Aplicación Sumas y Restas"
+                android:id="@+id/textView"
+                android:layout_gravity="right"
+                android:textColor="#ffffff" />
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Juan Camilo Guarin P"
+                android:id="@+id/textView2"
+                android:layout_gravity="right"
+                android:textColor="#ffffff" />
 
-            <RadioButton
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Universidad Autonoma de Occidente"
+                android:id="@+id/textView3"
+                android:layout_gravity="right"
+                android:textColor="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado.."
+                android:id="@+id/tv_resultado"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="40dp"
+                android:textColor="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/et_primervalor"
+                android:hint="Ingrese primer valor"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/et_segundovalor"
+                android:layout_gravity="center_horizontal"
+                android:hint="Ingrese Segundo Valor"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="20dp" />
+
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sumar"
-                android:id="@+id/rb_sumar"
-                android:checked="true" />
+                android:id="@+id/cb_sumar"
+                android:checked="true"
+                android:textColor="#ffffff" />
 
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Restar"
-                android:id="@+id/rb_restar"
-                android:checked="false" />
-        </RadioGroup>
+                android:id="@+id/cb_restar"
+                android:checked="false"
+                android:textColor="#ffffff" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Operar"
-            android:id="@+id/button"
-            android:layout_gravity="center_horizontal"
-            android:onClick="operar" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="40dp" />
 
-    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Operar"
+                android:id="@+id/bt_operar"
+                android:layout_gravity="center_horizontal"
+                android:onClick="operar" />
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
